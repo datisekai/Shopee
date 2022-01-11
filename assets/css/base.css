@@ -1,0 +1,123 @@
+:root{
+    --white-color:#fff;
+    --black-color:#000;
+    --text-color:#333;
+}
+
+* {
+        box-sizing: inherit;
+}
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+/* Reponsive */
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__full-witdh{
+    width: 100%;
+}
+
+.grid__column-2{
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 16.6667%;
+}
+
+.grid__column-2-4{
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 20%;
+}
+
+.grid__column-10{
+    width: 83.3333%;
+}
+
+.grid__row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+/* Animation */
+@keyframes fadeIn{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Selection */
+.select-input{
+    min-width: 150px;
+    height: 34px;
+    padding: 0 12px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.select-input__label{
+    font-size: 1.4rem;  
+}
+
+.select-input-icon{
+    font-size: 1.4rem;
+}
+
+.select-input__list{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    background-color: var(--white-color);
+    padding-left: 0;
+    list-style: none;
+    padding: 4px 16px;
+    display: none;
+    z-index: 1;
+    box-shadow: 0 1px 5px #ccc;
+}
+
+.select-input__list::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: -12px;
+    right: 0;
+    width: 100%;
+    height: 30px;
+}
+
+.select-input__item-link{
+    text-decoration: none;
+    font-size: 1.3rem;
+    display: block;
+    padding: 4px 0;
+    color: var(--text-color);
+}
+
+.select-input__item-link:hover{
+    color:  #F63F2D;
+}
+
+.select-input:hover .select-input__list{
+    display: block;
+}
+
+.home-product{
+    margin-bottom: 30px;
+}
